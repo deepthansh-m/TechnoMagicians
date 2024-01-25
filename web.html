@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram-like Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-container" id="main-container">
+        <header>
+            <h1 class="site-name">Social Website</h1>
+            <!--<div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search games...">
+                <button onclick="searchGames()">Search</button>
+            </div> -->
+            <nav id="main-nav">
+                <div class="user-actions">
+                    <div class="mobile-menu" onclick="toggleDropdown()">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <a href="web.html">Home</a><br>
+                        <a href="profile.html">Profile</a><br>
+                        <a href="friends.html">Friends</a><br>
+                        <a href="message.html">Messages</a><br>
+                        <a href="settings.html">Settings</a><br>
+                        <a href="http://localhost:8501">Risk Detector</a><br>
+                    </div>
+                    <div id="user-section" style="display: none;">
+                        <p id="user-greeting"></p>
+                    </div>
+                    <div id="login-section" style="display: block;">
+                        <a href="login.html" class="login-button">Login</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    <section class="content">
+        <article class="post">
+            <h2>Post Title</h2>
+            <p>Post content goes here...</p>
+            <p class="post-meta">Posted by John Doe on January 24, 2024</p>
+        </article>
+
+        <!-- More posts go here -->
+
+    </section>
+
+    <aside class="sidebar">
+        <h2>Friends</h2>
+        <ul>
+            <li>Friend 1</li>
+            <li>Friend 2</li>
+            <li>Friend 3</li>
+            <!-- Add more friends here -->
+        </ul>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 Social Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

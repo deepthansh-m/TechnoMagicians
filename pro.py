@@ -40,12 +40,28 @@ def profile_user(username):
 
 def main():
     st.title("Instagram Profile Analyzer")
+    
+    st.markdown(
+        """
+        <style>
+            .header {
+                padding: 1em;
+                color: white;
+                background-color: #3498db;
+                text-align: center;
+            }
+        </style>
+        <div class="header">
+            <p><a style="color: white;" href="href="file:///Users/deepthanshm/Documents/TechnoMagicians/web.html">Home</a></p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-    # Get input from the user
     username_to_analyze = st.text_input("Enter Instagram Username:")
 
     if st.button("Analyze"):
-        # Profile the user and display the results
+        
         risk_level, risk_percentage, total_posts, followers, following, profile_pic_url = profile_user(username_to_analyze)
         if profile_pic_url:
             image = Image.open(BytesIO(requests.get(profile_pic_url).content))

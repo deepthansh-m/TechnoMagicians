@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Social Media Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main.chat {
+    display: flex;
+    justify-content: space-between;
+}
+
+.conversations {
+    flex: 1;
+    padding: 20px;
+}
+
+.conversations h2 {
+    margin-bottom: 20px;
+}
+
+.conversations ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.conversations li {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.conversations li.active {
+    background-color: #ecf0f1;
+    border-radius: 4px;
+}
+
+.messages {
+    flex: 2;
+    padding: 20px;
+}
+
+.message-container {
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.message.received {
+    background-color: #ecf0f1;
+}
+
+.message.sent {
+    background-color: #3498db;
+    color: #fff;
+    align-self: flex-end;
+}
+
+form {
+    display: flex;
+    margin-top: 20px;
+}
+
+form input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+</style>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>My Social Media</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Friends</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container chat">
+        <section class="conversations">
+            <h2>Conversations</h2>
+            <ul>
+                <li class="active">Friend 1</li>
+                <li>Friend 2</li>
+                <li>Friend 3</li>
+                <!-- Add more friends here -->
+            </ul>
+        </section>
+
+        <section class="messages">
+            <h2>Chat with Friend 1</h2>
+            <div class="message-container" id="messageContainer">
+                <div class="message received">Hello!</div>
+                <div class="message sent">Hi there!</div>
+                <!-- Add more messages here -->
+            </div>
+
+            <form id="messageForm">
+                <input type="text" id="messageInput" placeholder="Type a message..." required>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Social Media. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
